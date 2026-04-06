@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frutinhas Geladas | Vapes & Pods Premium</title>
+  <link rel ="stylesheet" href="assets/images/styles/style.css"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">🍓 Frutinhas Geladas</div>
+  <div class="nav-right">
+    <button class="cart-btn" onclick="toggleCart()">
+      🛒 Carrinho
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <span class="hero-badge">🔥 Pods & Vapes Premium</span>
+    <h1>Frutinhas<br>Geladas</h1>
+    <p class="hero-sub">As melhores marcas — Ignite, Elfbar, Oxbar, Black Sheep, Vaporesso e muito mais.<br>Entrega rápida em Porto Alegre e região.</p>
+    <div class="hero-btns">
+      <a href="#produtos" class="btn-primary">Ver Produtos</a>
+      <a href="https://wa.me/5551991996996" target="_blank" class="btn-outline">💬 Falar no WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- BANNER STRIP -->
+<div class="banner-strip">
+  <span class="banner-text">🍓 FRETE GRÁTIS ACIMA DE R$280 &nbsp;•&nbsp; 🔥 IGNITE • ELFBAR • OXBAR • BLACK SHEEP • VAPORESSO • LIFEPOD &nbsp;•&nbsp; ⚡ ENTREGA RÁPIDA &nbsp;•&nbsp; 💳 ACEITA PIX &nbsp;•&nbsp; 🔥 ESTOQUE FRESQUINHO &nbsp;•&nbsp;</span>
+</div>
+
+<!-- FEATURES -->
+<div class="features-row">
+  <div class="feature-card">
+    <div class="feature-icon">⚡</div>
+    <div class="feature-title">Entrega Rápida</div>
+    <div class="feature-desc">Produto na sua mão o mais rápido possível</div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">✅</div>
+    <div class="feature-title">100% Original</div>
+    <div class="feature-desc">Produtos lacrados e originais garantidos</div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">💳</div>
+    <div class="feature-title">PIX</div>
+    <div class="feature-desc">Pagamento fácil e seguro</div>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">💬</div>
+    <div class="feature-title">Suporte WhatsApp</div>
+    <div class="feature-desc">Atendimento direto e ágil</div>
+  </div>
+</div>
+
+<!-- PRODUCTS SECTION -->
+<section id="produtos">
+  <div class="section-header">
+    <h2 class="section-title">Nossos Produtos</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- CATEGORY FILTER -->
+  <div class="cats" id="catFilter">
+    <button class="cat-pill active" onclick="filterCat(this, 'all')">🛒 Todos</button>
+    <button class="cat-pill" onclick="filterCat(this, 'ignite')">🟠 Ignite</button>
+    <button class="cat-pill" onclick="filterCat(this, 'elfbar')">🔵 Elfbar</button>
+    <button class="cat-pill" onclick="filterCat(this, 'oxbar')">🟣 Oxbar</button>
+    <button class="cat-pill" onclick="filterCat(this, 'blacksheep')">⚫ Black Sheep</button>
+    <button class="cat-pill" onclick="filterCat(this, 'lifepod')">🟢 Lifepod</button>
+    <button class="cat-pill" onclick="filterCat(this, 'vaporesso')">⚡ Vaporesso</button>
+    <button class="cat-pill" onclick="filterCat(this, 'juice')">🧪 Juices</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">🍓 Frutinhas Geladas</span>
+  <p>Vapes & Pods Premium · Porto Alegre e Região</p>
+  <p style="margin-top:8px;">
+    <a href="https://wa.me/5551991996996" target="_blank" style="color:var(--accent1); text-decoration:none;">📲 (51) 99199-6996</a>
+  </p>
+  <p style="margin-top:16px; font-size:0.75rem; opacity:0.4;">© 2026 Frutinhas Geladas</p>
+</footer>
+
+<!-- FLOAT WPP -->
+<a class="float-wpp" href="https://wa.me/5551991996996" target="_blank" title="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h2>🛒 Carrinho</h2>
+    <button class="close-btn" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <span>🛒</span>
+      Seu carrinho está vazio.<br>Adicione produtos para continuar!
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">R$ 0</span>
+    </div>
+    <button class="wpp-btn" onclick="sendToWhatsApp()">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Pedir pelo WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✅ Produto adicionado!</div>
+
+<script>
+  const WHATSAPP_NUMBER = '5551991996996';
+
+  const products = [
+    // IGNITE
+    { id:1, brand:'IGNITE', name:'V55', price:100, cat:'ignite', emoji:'🟠' },
+    { id:2, brand:'IGNITE', name:'V80', price:120, cat:'ignite', emoji:'🟠' },
+    { id:3, brand:'IGNITE', name:'V80 Silver (Tobacco)', price:95, cat:'ignite', emoji:'🟠' },
+    { id:4, brand:'IGNITE', name:'V120', price:115, cat:'ignite', emoji:'🟠' },
+    { id:5, brand:'IGNITE', name:'V150', price:120, cat:'ignite', emoji:'🟠' },
+    { id:6, brand:'IGNITE', name:'V155', price:130, cat:'ignite', emoji:'🟠' },
+    { id:7, brand:'IGNITE', name:'V250', price:140, cat:'ignite', emoji:'🟠' },
+    { id:8, brand:'IGNITE', name:'V300', price:155, cat:'ignite', emoji:'🟠' },
+    { id:9, brand:'IGNITE', name:'V400', price:170, cat:'ignite', emoji:'🟠' },
+    { id:10, brand:'IGNITE', name:'P100 Pro Kit', price:160, cat:'ignite', emoji:'🟠' },
+    { id:11, brand:'IGNITE', name:'P100 Pro Refill', price:95, cat:'ignite', emoji:'🟠' },
+    // ELFBAR
+    { id:12, brand:'ELFBAR', name:'BC 10.000 Puffs SE', price:105, cat:'elfbar', emoji:'🔵' },
+    { id:13, brand:'ELFBAR', name:'BC 15.000 Puffs', price:100, cat:'elfbar', emoji:'🔵' },
+    { id:14, brand:'ELFBAR', name:'BC 45.000 Puffs', price:170, cat:'elfbar', emoji:'🔵' },
+    { id:15, brand:'ELFBAR', name:'EW Bateria', price:80, cat:'elfbar', emoji:'🔵' },
+    { id:16, brand:'ELFBAR', name:'Refill EW 16.000 Puffs', price:105, cat:'elfbar', emoji:'🔵' },
+    { id:17, brand:'ELFBAR', name:'GH23K', price:135, cat:'elfbar', emoji:'🔵' },
+    { id:18, brand:'ELFBAR', name:'TE30K', price:135, cat:'elfbar', emoji:'🔵' },
+    { id:19, brand:'ELFBAR', name:'Ice King 40K', price:155, cat:'elfbar', emoji:'🔵' },
+    { id:20, brand:'ELFBAR', name:'Trio 40K', price:160, cat:'elfbar', emoji:'🔵' },
+    // OXBAR
+    { id:21, brand:'OXBAR', name:'Oxbar 30K', price:135, cat:'oxbar', emoji:'🟣' },
+    // BLACK SHEEP
+    { id:22, brand:'BLACK SHEEP', name:'Dual Tank 40K', price:200, cat:'blacksheep', emoji:'⚫' },
+    { id:23, brand:'BLACK SHEEP', name:'Dual Tank 20K', price:165, cat:'blacksheep', emoji:'⚫' },
+    // LIFEPOD
+    { id:24, brand:'LIFEPOD', name:'Eco2 Aparelho', price:75, cat:'lifepod', emoji:'🟢' },
+    { id:25, brand:'LIFEPOD', name:'Kit Eco2 10.000 Puffs', price:140, cat:'lifepod', emoji:'🟢' },
+    { id:26, brand:'LIFEPOD', name:'Refil Eco2 10.000 Puffs', price:110, cat:'lifepod', emoji:'🟢' },
+    // VAPORESSO APARELHOS
+    { id:27, brand:'VAPORESSO', name:'Luxe X2', price:445, cat:'vaporesso', emoji:'⚡' },
+    { id:28, brand:'VAPORESSO', name:'XROS Nano 3', price:380, cat:'vaporesso', emoji:'⚡' },
+    { id:29, brand:'VAPORESSO', name:'XROS Pro', price:425, cat:'vaporesso', emoji:'⚡' },
+    // VAPORESSO COILS
+    { id:30, brand:'VAPORESSO', name:'GTX Mesh 0.15', price:160, cat:'vaporesso', emoji:'⚡' },
+    { id:31, brand:'VAPORESSO', name:'Luxe Q 1.0', price:175, cat:'vaporesso', emoji:'⚡' },
+    { id:32, brand:'VAPORESSO', name:'Luxe Q 0.6', price:170, cat:'vaporesso', emoji:'⚡' },
+    { id:33, brand:'VAPORESSO', name:'GTX Core GTX 8', price:170, cat:'vaporesso', emoji:'⚡' },
+    { id:34, brand:'VAPORESSO', name:'GTX Regular 1.2', price:125, cat:'vaporesso', emoji:'⚡' },
+    { id:35, brand:'VAPORESSO', name:'GTX Mesh 0.8', price:175, cat:'vaporesso', emoji:'⚡' },
+    { id:36, brand:'VAPORESSO', name:'GTX Mesh 0.6', price:160, cat:'vaporesso', emoji:'⚡' },
+    { id:37, brand:'VAPORESSO', name:'GTI Mesh 0.5', price:185, cat:'vaporesso', emoji:'⚡' },
+    { id:38, brand:'VAPORESSO', name:'GTI Mesh 0.2', price:190, cat:'vaporesso', emoji:'⚡' },
+    { id:39, brand:'VAPORESSO', name:'XROS 1.2 2ML', price:85, cat:'vaporesso', emoji:'⚡' },
+    { id:40, brand:'VAPORESSO', name:'Coil ZERO Mesh 1.2', price:100, cat:'vaporesso', emoji:'⚡' },
+    // JUICES
+    { id:41, brand:'BLVK', name:'NicSalt 50mg 30ml', price:135, cat:'juice', emoji:'🧪' },
+    { id:42, brand:'BLVK', name:'NicSalt 35mg 30ml', price:135, cat:'juice', emoji:'🧪' },
+    { id:43, brand:'ZOMO', name:'NicSalt 20mg 30ml', price:85, cat:'juice', emoji:'🧪' },
+  ];
+
+  let cart = [];
+  let currentFilter = 'all';
+
+  function renderProducts(cat) {
+    const grid = document.getElementById('productsGrid');
+    const filtered = cat === 'all' ? products : products.filter(p => p.cat === cat);
+    grid.innerHTML = filtered.map(p => `
+      <div class="product-card">
+        <div class="product-img">${p.emoji}</div>
+        <div class="product-info">
+          <div class="product-brand">${p.brand}</div>
+          <div class="product-name">${p.name}</div>
+          <div class="product-footer">
+            <div class="product-price">R$ ${p.price}</div>
+            <button class="add-btn" onclick="addToCart(${p.id})" title="Adicionar ao carrinho">+</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function filterCat(btn, cat) {
+    document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = cat;
+    renderProducts(cat);
+  }
+
+  function addToCart(id) {
+    const product = products.find(p => p.id === id);
+    const existing = cart.find(i => i.id === id);
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({ ...product, qty: 1 });
+    }
+    updateCartUI();
+    showToast(`✅ ${product.name} adicionado!`);
+  }
+
+  function removeFromCart(id) {
+    cart = cart.filter(i => i.id !== id);
+    updateCartUI();
+    renderCartItems();
+  }
+
+  function changeQty(id, delta) {
+    const item = cart.find(i => i.id === id);
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) { removeFromCart(id); return; }
+    updateCartUI();
+    renderCartItems();
+  }
+
+  function updateCartUI() {
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    document.getElementById('cartCount').textContent = count;
+    document.getElementById('cartTotal').textContent = `R$ ${total}`;
+    document.getElementById('cartFooter').style.display = cart.length ? 'block' : 'none';
+    renderCartItems();
+  }
+
+  function renderCartItems() {
+    const container = document.getElementById('cartItems');
+    if (cart.length === 0) {
+      container.innerHTML = `
+        <div class="cart-empty">
+          <span>🛒</span>
+          Seu carrinho está vazio.<br>Adicione produtos para continuar!
+        </div>`;
+      return;
+    }
+    container.innerHTML = cart.map(item => `
+      <div class="cart-item">
+        <div class="cart-item-emoji">${item.emoji}</div>
+        <div class="cart-item-info">
+          <div class="cart-item-brand">${item.brand}</div>
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-price">R$ ${item.price * item.qty}</div>
+        </div>
+        <div class="cart-item-controls">
+          <button class="qty-btn" onclick="changeQty(${item.id}, -1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${item.id}, +1)">+</button>
+          <button class="remove-item" onclick="removeFromCart(${item.id})" title="Remover">🗑</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function toggleCart() {
+    const drawer = document.getElementById('cartDrawer');
+    const overlay = document.getElementById('cartOverlay');
+    const isOpen = drawer.classList.contains('open');
+    drawer.classList.toggle('open', !isOpen);
+    overlay.classList.toggle('open', !isOpen);
+  }
+
+  function sendToWhatsApp() {
+    if (cart.length === 0) return;
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    let msg = '🍓 *Olá! Quero fazer um pedido:*\n\n';
+    cart.forEach(item => {
+      msg += `• ${item.brand} ${item.name} x${item.qty} — R$ ${item.price * item.qty}\n`;
+    });
+    msg += `\n💰 *Total: R$ ${total}*\n\nPode confirmar disponibilidade? 😊`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+  }
+
+  let toastTimer;
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+  }
+
+  // Init
+  renderProducts('all');
+</script>
+</body>
+</html>
